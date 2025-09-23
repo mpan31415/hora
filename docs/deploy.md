@@ -18,7 +18,12 @@ conda install mamba -c conda-forge
 Then, install `rosallegro` conda environment. Note that his `rosallegro` environment is different from what we used to train the policy. This is mainly to solve possible conflicts between ros and varies packages we used (e.g. `pytorch`).
 
 ```
+### create environment
 mamba create -n rosallegro ros-noetic-desktop python=3.9 -c robostack -c robostack-experimental -c conda-forge --no-channel-priority --override-channels
+# NOTE: if RViz fails to launch in the env created using above command, then re-create the env by specifying the yaml-cpp version as follows:
+mamba create -n rosallegro ros-noetic-desktop python=3.9 yaml-cpp=0.6 -c robostack -c robostack-experimental -c conda-forge --no-channel-priority --override-channels
+
+### activate environment
 conda activate rosallegro
 ```
 
