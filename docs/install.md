@@ -29,6 +29,10 @@ Note, there may be some errors about `ERROR: pip's dependency resolver does not 
 ```
 # this example can only be ran with a monitor 
 python examples/joint_monkey.py
+
+# NOTE: If this error appears: "ImportError: libpython3.8.so.1.0 ...", update the LD_LIBRARY_PATH and try again:
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+python examples/joint_monkey.py
 ```
 
 ## Hora Repository
