@@ -93,6 +93,13 @@ Visualize it by running the following command. Note that stage 1 policy refers t
 # s1 and s2 stands for stage 1 and 2, respectively
 scripts/vis_s1.sh hora_v0.0.2
 scripts/vis_s2.sh hora_v0.0.2
+
+# NOTE: if an error appears: "libtorch_cpu.so: undefined symbol: iJIT_NotifyEvent", Re-install PyTorch as follows, and try again:
+pip install --force-reinstall --no-cache-dir torch -f https://download.pytorch.org/whl/cu118
+<run above scripts again>
+
+# NOTE: if an numpy.float error apperas, rollback numpy to an older version (likely needs <1.20, see what error message says), and try again:
+pip install "numpy<1.20"
 ```
 
 Evaluate this two policies by running:
