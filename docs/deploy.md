@@ -42,4 +42,7 @@ Once it's launched, run the following command in the `hora` conda environment to
 # e.g. scripts/deploy.sh hora
 conda activate hora
 scripts/deploy.sh ${OUTPUT_NAME}
+
+# NOTE: if an error about not finding "rospy" appears, install it inside the "hora" conda env:
+conda install -c conda-forge -c robostack rospkg catkin_pkg empy ros-noetic-rospy ros-noetic-std-msgs ros-noetic-geometry-msgs ros-noetic-sensor-msgs
 ```
